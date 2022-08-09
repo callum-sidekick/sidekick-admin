@@ -1,0 +1,15 @@
+bigquery_dbt:
+  target: dev
+  outputs:
+    dev:
+      # Name of the project you'd like to write to i.e. sk-data-sandbox,
+      # sk-data-dev (DO NOT USE sk-data-eu or sk-data-us)
+      project: YOUR PROJECT 
+      dataset: YOUR DATASET # Name of the BigQuery dataset you'd like to write to
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: EU
+      method: oauth # use oauth (your personal account) to authenticate to writing to BigQuery
+      priority: interactive
+      threads: 8
+      type: bigquery
