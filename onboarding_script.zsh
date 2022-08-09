@@ -43,7 +43,7 @@ echo "Analytics repo successfully installed"
 echo "Setting up dbt profile.."
 mkdir ~/.dbt
 touch ~/.dbt/profiles.yml
-curl https://bitbucket.org/goodlifeme/datateam/raw/d8e4894d0ccaa5482b4eb294f8e6c143781b4997/admin/sample_profiles.yml >> ~/.dbt/profiles.yml
+curl https://raw.githubusercontent.com/callum-sidekick/sidekick-admin/main/sample_profiles.yml >> ~/.dbt/profiles.yml
 echo "export DBT_PROFILES_DIR=~/.dbt" >> ~/.zshrc
 echo "dbt profile created.. You will need to edit this file later."
 
@@ -88,6 +88,6 @@ echo "Global gitignore created"
 
 ## Add in helper script
 echo "Copying make life easier script.."
-curl https://bitbucket.org/goodlifeme/datateam/raw/d8e4894d0ccaa5482b4eb294f8e6c143781b4997/admin/make_life_easier.zsh > ~/.make_life_easier.zsh
+curl https://raw.githubusercontent.com/callum-sidekick/sidekick-admin/main/make_life_easier.zsh > ~/.make_life_easier.zsh
 echo 'source ~/.make_life_easier.zsh' >> ~/.zshrc
 echo "Copied successfully"
